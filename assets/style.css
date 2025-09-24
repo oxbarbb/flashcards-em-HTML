@@ -1,7 +1,7 @@
 :root {
-    --text-color: #DBE4EF; 
-    --card-front-color:#144480;
-    --card-back-color:#00F4BF;
+    --text-color: #DBE4EF;
+    --card-front-color: #144480;
+    --card-back-color: #00F4BF;
 }
 
 body {
@@ -54,4 +54,30 @@ footer p {
     text-align: center;
     font-size: 0.6rem;
     margin-top: 0.5rem;
+}
+
+.cartao_conteudo_pergunta p {
+    color: var(--text-color);
+    font-weight: 500
+}
+
+.cartao_conteudo_resposta p {
+    color: (--card-back-color);
+    font-weight: 700;
+}
+
+.cartao.cartao:houver.cartao_conteudo {
+    transform: rotate (180deg);
+}
+
+.cartao_conteudo_pergunta,
+.cartao_conteudo_resposta {
+    backface-visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.cartao_conteudo_resposta {
+    transform: rotatey(180deg);
 }
